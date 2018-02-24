@@ -1,0 +1,558 @@
+body{
+  margin: 0 auto;
+  padding: 0;
+}
+
+.container{
+width:100%;
+display: grid;
+grid-template-areas:
+  'nav  '
+  'header '
+  'main  '
+  'footer ';
+}
+
+.cabecalho {
+grid-area: header;
+}
+
+.nav{
+grid-area:nav;
+ }
+
+.conteudo{
+grid-area: main;
+}
+
+.rodape{
+grid-area: footer;
+}
+
+ /*--fomat icones redes sociais--*/
+
+#topo{
+background-color:#000080;
+margin:0 auto;
+width:100%;
+height:55px;
+z-index: 9999;
+}
+
+.social{
+float:right;
+margin:10px;
+display:block;
+width: 40px;
+height:40px;
+border-radius:50%;
+transition:all 0.4s ease-out;
+}
+
+.social#facebook{
+background-color:#2372a3;
+}
+
+.social#instagram{
+background-color:#3f729b;
+ }
+
+.social#plus{
+background-color:#dd4b39;
+ }
+
+.social#twitter{
+background-color:#0084b4;
+ }
+
+ .social#youtube{
+background-color:#b00;
+ }
+
+.icones{
+margin:0 auto;
+padding:5px;
+width:30px;
+}
+
+.social:hover{
+cursor: pointer;
+transform:translatey(-10px);
+box-shadow:5px 5px 2px 5px #d6d3d3;
+}
+
+ /*----------------*/
+
+ /*----menu resposivo ----*/
+.nav{
+border-bottom: 2px solid #af9e9e;
+text-align: right;
+height: 155px;
+}
+
+.nav a:hover {
+color: #fbab19;
+}
+#cabecalho2{
+  width: 100%;
+  height: 150px;
+  background-color: white;
+  margin: 0;
+  float: left;
+  border-radius: 5px;
+}
+#menu ul .logo_1{
+float: left;
+margin: 5px 0 0 50px;
+}
+
+#menu ul .divmenu{
+float: right;
+margin-top: 20px;
+padding-right: 30px;
+}
+#menu ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  float: left;
+}
+#menu ul li{
+  float: left;
+  font: 18px arial;
+  transition: all 0.70s;
+  border-radius: 10%;
+  padding-right: 10px;
+}
+#menu ul li:hover{
+  background-color: #FFFFFF;
+  border-top: 4px solid #000000;
+}
+#menu ul li a{
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+  color: #888;
+}
+#menu ul li .home2{
+  background-image: url(../image/icones/home.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px;
+  float: left;
+  width: 100%;
+  padding: 25px 0;
+}
+#menu ul li .empresa2{
+  background-image: url(../image/icones/empresa.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35px;
+  float: left;
+  width: 100%;
+  padding: 25px 0;
+
+}
+#menu ul li .servicos2{
+  background-image: url(../image/icones/serviços.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35px;
+  float: left;
+  width: 100%;
+  padding: 25px 0;
+
+}
+#menu ul li .produtos2{
+  background-image: url(../image/icones/produtos.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35px;
+  float: left;
+  width: 100%;
+  padding: 25px 0;
+
+}
+#menu ul li .contato2{
+  background-image: url(../image/icones/contatos.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35px;
+  float: left;
+  width: 100%;
+  padding: 25px 0;
+}
+.divmenu img{
+margin:2px;
+height: 50px;
+width: 50px;
+}
+
+label{
+margin: 0px 40px 0px 0px;
+font-size: 26px;
+line-height: 100px;
+display: none;
+}
+
+#toggle{
+      display: none;
+}
+
+@media only screen and (max-width: 860px){
+
+.container{
+display: block;
+justify-content:center;
+}
+
+#banner{ z-index: -2;
+position: relative;
+display: block;
+}
+
+label{
+display: block;
+cursor: pointer;
+}
+
+.divmenu{
+margin: 0 auto;
+display: block;
+text-align: center;
+width: 70%;
+display:none;
+}
+
+.divmenu a{
+font-weight: bold;
+font-family: sans-serif;
+display: flex;
+justify-content: center;
+border-radius: 20px;
+border: solid#ffff;
+background-color:#C0C0C0;
+margin: 1px;
+}
+
+.divmenu a:hover{
+background-color:#bb0000;
+}
+
+#toggle:checked + .menu{
+display: block;
+}
+
+.quemsomos{
+display:grid;
+grid-column: auto;
+grid-row: auto;
+justify-content: center;
+}
+
+.quemsomos .box1{  font-style: italic;
+font-size: 1em;
+grid-column: 1 / span 1;
+grid-row: 1/span 1 ;
+margin-left:50px;
+margin-right: 50px;
+}
+
+.serviços{
+display:grid;
+grid-column: auto;
+grid-row: auto;
+justify-content: center;
+}
+
+.serviços .sbox0{
+font-size: 2em;
+grid-column: 1 / span 1;
+grid-row: 1/span 1 ;
+margin-left:50px;
+margin-right: 50px;
+}
+
+.produtos{
+display:grid;
+grid-column: auto;
+grid-row: auto;
+justify-content: center;
+}
+
+.produtos .pbox0{
+font-size: 2em;
+grid-column: 1 / span 1;
+grid-row: 1/span 1 ;
+margin-left:50px;
+margin-right: 50px;
+}
+
+.rodape{
+width:100%;
+}
+}
+/*---------------------------------------------------*/
+
+/*--fomat slider*/
+#banner{
+position: relative;
+margin:1px 1px 1px 1px;
+background-color:#DCDCDC;
+overflow: hidden;
+width:100%;
+height:450px;
+}
+.slider:nth-child(1){animation-delay:5s
+
+}
+.slider:nth-child(2){animation-delay:10s;
+
+}
+.slider:nth-child(3){animation-delay:15s;
+
+}
+.slider:nth-child(4){animation-delay:20s;
+}
+.slider{
+position:absolute;
+width: 100%;
+height:450px;
+opacity:0;
+animation-name:fotos;
+animation-duration:25s;
+animation-iteration-count: infinite;
+}
+
+@keyframes fotos {
+25%{opacity: 1;
+        }
+50%{opacity: 0;
+        }
+}
+/*-------------format empresa ------------*/
+.quemsomos{
+display: grid;
+grid-gap: 5px;
+}
+
+.box2 img{
+width: 100px;
+height: 100px;
+align-items: center;
+border-radius: 50%;
+background-color: #243f80;
+}
+
+.box3 img{
+width: 100px;
+height: 100px;
+align-items: center;
+border-radius: 50%;
+background-color: #fbab19;
+}
+
+.box4 img{
+width: 100px;
+height: 100px;
+align-items: center;
+border-radius: 100%;
+background-color: #bb0000;
+}
+.box1 img{
+width: 150px;
+height: 150px;
+align-items: center;
+border-radius: 50%;
+background-color: #fff;
+margin-top: 50px;
+}
+
+.box1 p{
+font-size: 2em;
+font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.box1 {
+font-style: italic;
+font-size: 1em;
+text-align: center;
+grid-column: 1 / span 3;
+grid-row: 1/span 1 ;
+margin-left:50px;
+margin-right: 50px;
+}
+
+.box2{
+color: #243f80;
+font-size: 25px;
+font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+text-align: center;
+margin-left: 20px;
+margin-right: 20px;
+padding: 10px;
+}
+
+.box3{
+color: #fbab19;
+font-size: 25px;
+font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+text-align: center;
+margin-left: 20px;
+margin-right: 20px;
+}
+
+.box4{
+color:  #bb0000;
+font-size: 25px;
+font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+text-align: center;
+margin-left: 20px;
+margin-right: 20px;
+}
+
+.box1 h1{
+margin-top: 10px;
+margin-bottom: 10px;
+font-size: 3em;
+font-weight: bold;
+font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.colori1{
+color:#465b86;
+}
+
+/*---------------serviços-----------------*/
+
+.serviços{
+display: grid;
+grid-gap: 1px;
+}
+
+.sbox1 img,.sbox2 img ,.sbox3 img ,.sbox4 img {
+width: 230px;
+height:230px;
+}
+
+.sbox0{
+font-style: italic;
+text-align: center;
+grid-column: 1 / span 4;
+grid-row: 1/span 1 ;
+margin-left:50px;
+margin-right: 50px;
+font-size: 2.5em;
+font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.sbox0 img{
+width: 100px;
+height: 100px;
+}
+
+.sbox1 ,.sbox2,.sbox3,.sbox4{
+margin: 10px;
+align-items: center;
+text-align: center;
+justify-content: space-around;
+font-size: 20px;
+font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.sbox0 h1{
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+/*--------------produtos-----------*/
+
+.produtos{
+display: grid;
+grid-gap: 1px;
+}
+
+.pbox0{
+font-style: italic;
+text-align: center;
+grid-column: 1 / span 4;
+grid-row: 1/span 1 ;
+margin-left:50px;
+margin-right: 50px;
+font-size: 2.5em;
+font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.pbox1 img,.pbox2 img,.pbox3 img,.pbox4 img{
+width: 200px;
+height: 200px;
+}
+
+.pbox1,.pbox2,.pbox3,.pbox4{
+margin: 10px;
+align-items: center;
+text-align: center;
+justify-content: space-around;
+font-size: 20px;
+font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.pbox0 img{
+width: 100px;
+height: 100px;
+}
+
+.pbox0 h1{
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+/*--------------rodapé-----------*/
+
+.rodape{
+float:left;
+text-align: center;
+background: linear-gradient(gray, black);
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: 1;
+width: 100%;
+height: auto;
+}
+
+.rodape h1{
+padding-top: 10px;
+text-align: center;
+color: #efefef;
+}
+
+input[type="text"], input[type="email"], textarea{
+width: 30%;
+padding: 15px;
+background-color: #e9e9e9;
+border: 1px solid #ddd;
+margin: 10px;
+}
+
+input[type="submit"]{
+border: 0;
+height: 28px;
+width: 100px;
+margin: 10px;
+color: #696969;
+font-size: 20px;
+cursor: pointer;
+border-radius: 5%;
+background-color: #e9e9e9;
+}
+
+.rodape .localizacao{
+grid-column: 2/3;
+}
+
+.rodape .telefone{
+text-align: center;
+color: #e9e9e9;
+font-size: 23px;
+color: white;
+}
